@@ -1,0 +1,32 @@
+package com.ust.iocautowiring;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+public class B {
+
+	A a;
+//default constructor is needednto call autowiring by byName, byType
+	
+	public void setA(A a) {//byName  byType will use setter injection
+		System.out.println("set A() called....");
+		this.a = a;
+	}
+	public B(A a) {
+		// TODO Auto-generated constructor stub
+		this.a=a;
+		System.out.println("from B() constructor.....");
+	}//A is the type,, a is the name
+	//autowire by constructor means constructor with parameter--- directly use constructor and inject it
+	//for byName to work only 1name to 1 bean for bytype 1 class definition for 1 bean
+
+	@PostConstruct
+	public void SetUp() {
+		System.out.println("from setup");
+	}
+	
+	@PreDestroy
+	public void WindUp() {
+		System.out.println("from windup...");
+	}
+}

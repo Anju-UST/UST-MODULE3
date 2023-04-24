@@ -1,0 +1,5 @@
+package com.spring.java.config.annot;
+
+public class HelloService {
+
+}

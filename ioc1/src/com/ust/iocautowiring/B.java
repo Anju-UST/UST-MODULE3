@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class B {
 
 	A a;
-//default constructor is needednto call autowiring by byName, byType
+//default constructor is needed to call autowiring by byName, byType
 	public B() {
 		// TODO Auto-generated constructor stub
 	}

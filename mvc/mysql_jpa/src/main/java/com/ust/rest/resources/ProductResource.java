@@ -60,8 +60,8 @@ public class ProductResource {
 	 
 	 @DeleteMapping
 	  
-	  @RequestMapping(value="/delete/{productId}") public void
-	  deleteProduct(@PathVariable long productId) {
+	  @RequestMapping(value="/delete/{productId}")
+	 public void deleteProduct(@PathVariable long productId) {
 	  service.deleteProduct(productId); }
 	 
 }

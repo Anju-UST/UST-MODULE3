@@ -1,5 +1,0 @@
-package com.spring.java.config.annot;
-
-public interface HelloWorld {
-
-}

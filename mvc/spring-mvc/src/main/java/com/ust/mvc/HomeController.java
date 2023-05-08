@@ -12,8 +12,7 @@ public class HomeController {
 	
 	@GetMapping
 	public String respond(Model model) {
-	
-		return "registration";//view    displays 
+		return "registration";//view   displays 
 		//thymeleaf is view technology
 		
 	}

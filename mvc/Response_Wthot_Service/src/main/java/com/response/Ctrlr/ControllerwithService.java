@@ -50,7 +50,7 @@ public class ControllerwithService {
 			return ResponseEntity.ok().body(op.get());
 		}
 		else
-			return null;
+			return ResponseEntity.noContent().build();
 		
 	}
 	@GetMapping

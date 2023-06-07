@@ -26,7 +26,10 @@ public class ProductResource {
 	@Autowired
 	ProductService service;
 
-	
+	@GetMapping
+	public String test() {
+		return "test() working....";
+	}
 	  @GetMapping
 	  
 	  @RequestMapping("/retrieve/all") 

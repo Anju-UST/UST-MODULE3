@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class Product {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//generate primary key automatically
+	@GeneratedValue(strategy = GenerationType.AUTO)//generate primary key automatically
 	//AUTO is the default generation type or strategy. generation type is the strategy which the JPI should use or follow to generate primary key values
 	//when strategy is not specified jpa uses AUTO Strategy. when the underlined database is mysql GenerationType.AUTO means the jpi will create a hibernate sequence in the database for generation of primary keys
 	/*

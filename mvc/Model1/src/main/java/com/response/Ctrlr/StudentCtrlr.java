@@ -37,17 +37,19 @@ public class StudentCtrlr {
 	public ResponseEntity<?> getid(@PathVariable Long  id){
 		Optional<Student> op=repo.findById(id);
 		if(op.isPresent()) {
+			op.get();
 			return ResponseEntity.ok().body(op);
 		}
 		else
-			return null;
+			return ResponseEntity.noContent().build();
 		
 	}
 
 	@GetMapping
 	@RequestMapping("/get/all")
-	public List<Student> getall(){
-		return repo.findAll();
+	public ResponseEntity< List<Student>> getall(){
+	List<Student>op= repo.findAll();
+	return ResponseEntity.ok().body(op);
 		
 	}
 	
